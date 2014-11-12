@@ -23,6 +23,7 @@
 		9D8D95541A09598C00B289A1 /* redarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D8D95521A09598C00B289A1 /* redarrow.png */; };
 		9D8D95551A09598C00B289A1 /* greenarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D8D95531A09598C00B289A1 /* greenarrow.png */; };
 		9D8D95571A0978EE00B289A1 /* flatline.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 9D8D95561A0978EE00B289A1 /* flatline.JPG */; };
+		E1B392AD1A0E9D5100055144 /* StockDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B392AC1A0E9D5100055144 /* StockDetailView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		9D8D95521A09598C00B289A1 /* redarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redarrow.png; sourceTree = "<group>"; };
 		9D8D95531A09598C00B289A1 /* greenarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenarrow.png; sourceTree = "<group>"; };
 		9D8D95561A0978EE00B289A1 /* flatline.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flatline.JPG; sourceTree = "<group>"; };
+		E1B392AB1A0E9D5100055144 /* StockDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockDetailView.h; sourceTree = "<group>"; };
+		E1B392AC1A0E9D5100055144 /* StockDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockDetailView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 				664CACEA1A0198E100D6B4FF /* AppDelegate.m */,
 				664CACEC1A0198E100D6B4FF /* StockStatusViewController.h */,
 				664CACED1A0198E100D6B4FF /* StockStatusViewController.m */,
+				E1B392AB1A0E9D5100055144 /* StockDetailView.h */,
+				E1B392AC1A0E9D5100055144 /* StockDetailView.m */,
 				664CACEF1A0198E100D6B4FF /* PortfolioSummaryViewController.h */,
 				664CACF01A0198E100D6B4FF /* PortfolioSummaryViewController.m */,
 				9D55F7A21A05810900B630CC /* StatusTableViewCell.h */,
@@ -265,6 +270,7 @@
 				664CACF11A0198E100D6B4FF /* PortfolioSummaryViewController.m in Sources */,
 				9D7BF61A1A0346F10037E6D9 /* AddStockViewController.m in Sources */,
 				664CACEB1A0198E100D6B4FF /* AppDelegate.m in Sources */,
+				E1B392AD1A0E9D5100055144 /* StockDetailView.m in Sources */,
 				664CACEE1A0198E100D6B4FF /* StockStatusViewController.m in Sources */,
 				669144F31A099C930006A4FA /* PortfolioTableViewCell.m in Sources */,
 				664CAD101A01A61200D6B4FF /* Portfolio.m in Sources */,

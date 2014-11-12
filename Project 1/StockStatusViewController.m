@@ -6,11 +6,12 @@
 //  Copyright (c) 2014 CSE494. All rights reserved.
 //
 
-#import "StockStatusViewController.h"
 #import "Portfolio.h"
 #import "StatusTableViewCell.h"
+#import "StockDetailView.h"
+#import "StockStatusViewController.h"
 
-#define STOCK_DATA_QUERY_URL_P1 @"https://query.yahooapis.com/v1/public/yql?q=select%20Change%2C%20LastTradePriceOnly%2C%20Symbol%20from%20yahoo.finance.quote%20where%20symbol%20in%20("
+#define STOCK_DATA_QUERY_URL_P1 @"https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quote%20where%20symbol%20in%20("
 #define COMMA_ENCODING @"%2C"
 #define QUOTATION_ENCODING @"%22"
 #define STOCK_DATA_QUERY_URL_P2 @")&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys"
@@ -59,12 +60,15 @@
 
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [self refreshData];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     // Every time the view appears, the data will be refreshed.
     [spinner startAnimating];
-    [self refreshData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -332,6 +336,20 @@
             // If the table is not in edit mode, set it to edit mode and change the button title to "Done".
             [self.tableView setEditing:YES  animated:NO];
             self.removeButton.title = @"Done";
+        }
+    }
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"detail"]) {
+        StockDetailView *destination = segue.destinationViewController;
+        NSIndexPath *selectedSection =[self.tableView indexPathForSelectedRow];
+        if (selectedSection.section == 0) {
+            NSDictionary *selectedStock = watchingData[selectedSection.row];
+            destination.selectedStock = selectedStock;
+        } else {
+            NSDictionary *selectedStock = holdingsData[selectedSection.row];
+            destination.selectedStock = selectedStock;
         }
     }
 }
